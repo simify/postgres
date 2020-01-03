@@ -1,0 +1,12 @@
+{
+  "name": "stacks-postgres",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "migration:create": "db-migrate create"
+  },
+  "dependencies": {
+    "db-migrate": "^0.11.6"
+  }
+}
