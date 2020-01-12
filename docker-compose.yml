@@ -3,10 +3,14 @@ version: "3.7"
 services:
   postgres:
     build: ./
+    expose:
+      - "5432"
     ports:
       - "5432:5432"
-    restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: secret
       POSTGRES_DB: postgres
+    restart: always
+    volumes:
+      - ./volume/data:/var/lib/postgresql/data
